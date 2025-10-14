@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Drift - Mini Arcade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hud">
+      <div class="logo">Neon Drift</div>
+      <div class="stats">
+        <span>Score&nbsp;: <strong id="score">0</strong></span>
+        <span>Combo&nbsp;: <strong id="combo">x1</strong></span>
+        <span>Temps&nbsp;: <strong id="timer">60</strong>s</span>
+      </div>
+      <button id="restart" class="restart" aria-label="Rejouer">↻ Rejouer</button>
+    </div>
+
+    <main>
+      <canvas id="gameCanvas" width="520" height="680" aria-label="Zone de jeu"></canvas>
+      <aside class="panel">
+        <h1>Neon Drift</h1>
+        <p>
+          Attrape les orbes d'énergie et esquive les glitchs. Plus tu restes en
+          vie, plus le multiplicateur monte&nbsp;!
+        </p>
+        <ul>
+          <li><kbd>←</kbd> <kbd>→</kbd> pour te déplacer</li>
+          <li><kbd>Espace</kbd> pour activer un dash éclair</li>
+          <li>Le temps est limité à 60 secondes</li>
+        </ul>
+        <p class="hint">Astuce&nbsp;: enchaîne les orbes sans te faire toucher pour booster ton combo.</p>
+      </aside>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
